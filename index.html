@@ -1606,7 +1606,7 @@
                 console.log('Input value:', input.value);
                 console.log('Types:', typeof correctCode, typeof input.value);
 
-                if (input.value.trim() === correctCode) {
+                if (input.value.trim() === String(correctCode)) {
                     clearTimeout(timeout);
                     sessionStorage.setItem('access_token', correctCode);
                     btnText.innerText = "Welcome ❤️";
