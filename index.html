@@ -184,11 +184,8 @@
         }
 
         .grecaptcha-badge { 
-            display: block !important; 
             visibility: visible !important; 
-            position: fixed; 
-            bottom: 14px; 
-            right: 10px; 
+            display: block !important; 
             z-index: 9999 !important; 
         }
 
@@ -1625,7 +1622,7 @@
                                     btnLoader.style.display = 'none';
                                     btnText.textContent = "Unlock Our Space";
                                     btn.disabled = false;
-                                    setPasswordLockMessage("Wrong password. Try again.");
+                                    setPasswordLockMessage("Wrong Password.");
                                     setTimeout(() => {
                                         clearPasswordLockMessage();
                                     }, 3000);
