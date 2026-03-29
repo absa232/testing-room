@@ -1601,8 +1601,11 @@
             try {
                 const snapshot = await database.ref('build_revision').once('value');
                 const correctCode = snapshot.val();
+                console.log('Database value:', correctCode);
+                console.log('Input value:', input.value);
+                console.log('Types:', typeof correctCode, typeof input.value);
 
-                if (input.value === correctCode) {
+                if (input.value.trim() === correctCode) {
                     clearTimeout(timeout);
                     sessionStorage.setItem('access_token', correctCode);
                     btnText.innerText = "Welcome ❤️";
