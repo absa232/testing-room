@@ -1579,6 +1579,7 @@
         }
 
         async function verifyAccess() {
+            console.log('Starting verifyAccess');
             const btnText = document.getElementById('btnText');
             const btnLoader = document.getElementById('btnLoader');
             const unlockBtn = document.getElementById('unlockBtn');
@@ -1616,6 +1617,7 @@
                     throw new Error("Wrong Code");
                 }
             } catch (e) {
+                console.error('Error in verifyAccess:', e);
                 clearTimeout(timeout);
                 btnText.innerText = "Wrong Password";
                 btnLoader.style.display = "none";
